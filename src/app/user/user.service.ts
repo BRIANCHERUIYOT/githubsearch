@@ -5,6 +5,6 @@ import {HttpClient, HttpClientModule, HttpHeaders,HttpParams} from '@angular/com
   providedIn: 'root'
 })
 export class UserService {
-  // private httpClient: HttpClient
-  constructor() { }
+
+  constructor(private httpClient: HttpClient) { }
 }
