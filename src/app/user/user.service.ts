@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpClientModule, HttpHeaders,HttpParams} from '@angular/common/http';
+import{HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+// import { Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  constructor(private httpClient:HttpClient) { }
 
-  constructor(private httpClient: HttpClient) { }
-  getUser(): Observable<githubsearch[]>{
-    // let param = new HttpParams();
-    // param = param.append('username','BRIANCHERUIYOT');
-    return this.httpClient.get<githubsearch[]>('http://api.github.io.users',{
-      // params: param;/ 
-      // headers:this.headers,
-      withCredentials:true
+  getUser():Observable<any[]> {
+    return this.httpClient.get<any[]>('https://api.github.com/users/BRIANCHERUIYOT/repos', {
+
+
 
     })
-  }
+
+   }
 }
