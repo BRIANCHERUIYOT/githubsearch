@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GitsearchComponent } from './search/search.component';
+import { SearchFormComponent } from './form/form.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { FormComponent } from './form/form.component';
+import {UserSService} from './user-s.service';
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
+    GitsearchComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,7 @@ import { FormComponent } from './form/form.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserSService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 
