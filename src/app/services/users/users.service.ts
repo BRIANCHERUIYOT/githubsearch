@@ -10,9 +10,14 @@ export class UsersService {
   users!: Users
 getusers(){
   let promise = new Promise((resolve,reject) => {
-    this.http.get<users>('https://api.github.com/users')
+    this.http.get<users>('https://api.github.com/users').toPromise().then((response) => {
+      resolve(response);
+      
+    },error=>{
+      reject (error);
+    })
 
-
+   
   })
 }
 
