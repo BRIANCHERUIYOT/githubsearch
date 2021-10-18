@@ -1,5 +1,4 @@
-import { Component, OnInit,} from '@angular/core'; 
-import { UserService } from './user/user.service';
+import { Component } from '@angular/core'; 
 
 @Component({
   selector: 'app-root',
@@ -7,22 +6,6 @@ import { UserService } from './user/user.service';
   styleUrls: ['./app.component.css'],
  
 })
-export class AppComponent implements OnInit { 
+export class AppComponent {
   title = 'githubsearch';
-
-  constructor(private userService: UserService){}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-
-    this.getPublicRepositories();
-  }
-  
-
-
-  getPublicRepositories(){
-    this.userService.getUser().subscribe((response : any) =>{
-      console.log(response);
-    })
-  }
-
 }
