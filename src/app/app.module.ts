@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
